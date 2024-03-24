@@ -5,86 +5,31 @@ weight : 6
 chapter : false
 pre : " <b> 6. </b> "
 ---
-## Clean up resources
+### Delete AWS Elastic Beanstalk Application
 
-We will proceed to delete the resources in the following order:
+1. In a new browser window, open the [AWS Elastic Beanstalk Console](https://us-west-2.console.aws.amazon.com/elasticbeanstalk)
+2. In the left navigation menu, click on "Applications." You should see the "DevOpsGettingStarted" application listed under "All applications."
+3. Select the radio button next to "DevOpsGettingStarted."
+![Clean up](/images/6-cleanup/0001-clean-up.png)
 
-### Terminate EC2 Instances
 
-1. Terminate EC2 instance:
-    - Access the Amazon EC2 console at [EC2](https://console.aws.amazon.com/ec2/).
-    - On the left navigation bar, select "Instances."
-    - Select all EC2 instances related to the lab.
-    - Select **Instance state**.
-    - Select **Terminate instance**.
+### Delete AWS Code Pipeline
 
-   ![Terminate EC2](/images/16/0001.png?featherlight=false&width=90pc)
+1. In a new browser window, open the [AWS Code Pipelines Console](https://console.aws.amazon.com/codesuite/codepipeline/pipelines)
+2. Select the radio button next to **"Pipeline-DevOpsGettingStarted."**
+3. Click the white "Delete pipeline" button at the top of the page.
+![Clean up](/images/6-cleanup/0002-clean-up.png)
 
-2. Confirm termination.
+### Delete AWS S3 Bucket
 
-   ![Confirm Termination](/images/16/0002.png?featherlight=false&width=90pc)
+1. In a new browser window, open the [AWS S3 Bucket](https://s3.console.aws.amazon.com/s3/home)
+2. You should see a bucket named **"codepipeline-us-west-2"** followed by your AWS account number. Click on this bucket. Inside this bucket, you should see a folder named **"Pipeline-DevOpsGettingStarted."**
+![Clean up](/images/6-cleanup/0003-clean-up.png)
+![Clean up](/images/6-cleanup/0004-clean-up.png)
 
-### Remove NAT Gateway and Elastic IP Address
+### Delete AWS Code Build
 
-- Remove NAT Gateway and Elastic IP Address. AWS charges for wasted EIPs, so you need to double-check to avoid unintended charges.
-- Visit the Amazon VPC console page at [VPC](https://console.aws.amazon.com/vpc/).
-- On the left navigation bar, click "NAT Gateway."
-- Select NAT Gateway.
-- Click **Action**.
-- Click **Delete NAT Gateway**.
-
-   ![Delete NAT Gateway](/images/16/0003.png?featherlight=false&width=90pc)
-
-- Type "delete."
-- Click **Delete** to confirm the deletion of NAT Gateway.
-
-   ![Confirm Deletion](/images/16/0004.png?featherlight=false&width=90pc)
-   ![Confirm Deletion](/images/16/0005.png?featherlight=false&width=90pc)
-
-### Delete Elastic IP Address
-
-- Continue to delete Elastic IP Address.
-- Visit the Amazon VPC console page at [VPC](https://console.aws.amazon.com/vpc/).
-- On the left navigation bar, click "Elastic IP."
-- Select the Elastic IP Address we created.
-- Click **Action**.
-- Click **Release Elastic IP Address**.
-- Click **Release**.
-
-   ![Release Elastic IP](/images/16/0006.png?featherlight=false&width=90pc)
-   ![Release Elastic IP](/images/16/0007.png?featherlight=false&width=90pc)
-
-#### Delete the EC2 Instance connection endpoint
-- Access to Endpoint transactions
-- Select Action, select Delete VPC endpoints
-- Enter delete
-![Create VPC](/images/16/00020.png?featherlight=false&width=90pc)
-
-### Delete in the following order:
-
-- VPN Site to Site connection.
-
-   ![VPN Site to Site](/images/16/0008.png?featherlight=false&width=90pc)
-   ![VPN Site to Site](/images/16/0009.png?featherlight=false&width=90pc)
-
-- Virtual Private Gateway.
-
-   ![Virtual Private Gateway](/images/16/00010.png?featherlight=false&width=90pc)
-   ![Virtual Private Gateway](/images/16/00011.png?featherlight=false&width=90pc)
-   ![Virtual Private Gateway](/images/16/00012.png?featherlight=false&width=90pc)
-   ![Virtual Private Gateway](/images/16/00013.png?featherlight=false&width=90pc)
-
-- Customer Gateway.
-
-   ![Customer Gateway](/images/16/00014.png?featherlight=false&width=90pc)
-   ![Customer Gateway](/images/16/00015.png?featherlight=false&width=90pc)
-
-- VPC ASG VPN.
-
-   ![VPC ASG VPN](/images/16/00016.png?featherlight=false&width=90pc)
-   ![VPC ASG VPN](/images/16/00017.png?featherlight=false&width=90pc)
-
-- VPC ASG.
-
-   ![VPC ASG](/images/16/00018.png?featherlight=false&width=90pc)
-   ![VPC ASG](/images/16/00019.png?featherlight=false&width=90pc)
+1. In a new browser window, open the [AWS Code Build](https://console.aws.amazon.com/codesuite/codebuild)
+2. In the left navigation, click on **"Build project**s" under **"Build."** You should see the **"Build-DevOpsGettingStarted"** build project listed under **"Build project."**
+3. Select the radio button next to **"Build-DevOpsGettingStarted."**
+![Clean up](/images/6-cleanup/0005-clean-up.png)

@@ -6,21 +6,29 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-## Introduction to Amazon VPC
+## Introduction to Create Continuous Delivery Pipeline
 
-Amazon Virtual Private Cloud (Amazon VPC) is a **Virtual Private Cloud**—a customized virtual network hosted within the AWS Cloud and isolated from the external world. This concept resembles the design and implementation of a distinct standalone network environment in an on-premise data center, a practice still widely employed across many countries.
+Creating a Continuous Delivery (CD) pipeline using AWS services and GitHub involves several steps to automate the process of code deployment. Here's a brief introduction to setting up such a pipeline:
 
-Within this dedicated VPC, users possess comprehensive control over their virtual network environment. This control encompasses the initiation and operation of AWS resources, the ability to choose IP address ranges, establish network subnets, and configure routing tables and network gateways. Secure and convenient resource and application access within the VPC is facilitated through both IPv4 and IPv6 protocols.
+1. **Source Stage**: Your code resides in a GitHub repository, which acts as the source. Any change to the code triggers the pipeline.
 
-The term "Region" refers to vast clusters of AWS data centers situated within specific territories. Multiple VPCs can be established within a single region, with each VPC differentiated by its unique IP address space range. The IPv4 address range is defined by selecting a Classless Inter-Domain Routing (CIDR) notation, such as 10.0.0.0/16. Once created, the Amazon VPC address range remains immutable. These ranges can span from as extensive as /16 (equivalent to 65536 available addresses) to as limited as /28 (allowing for 16 available addresses). Crucially, these ranges must not overlap with any other connected networks.
+2. **Build Stage**: AWS CodeBuild compiles your source code, runs tests, and produces software packages that are ready to deploy.
 
-The Amazon VPC service was introduced subsequent to the launch of Amazon EC2. Consequently, AWS provided two distinct networking platforms for a period: EC2-Classic and EC2-VPC. EC2-Classic established a single flat network where all Amazon EC2 instances operated, enabling shared connectivity among AWS clients. However, as of December 2013, AWS exclusively supports EC2-VPC. Each region includes a default VPC along with a default subnet featuring a CIDR block of 172.31.0.0/16.
+3. **Deploy Stage**: AWS Elastic Beanstalk takes the build artifacts from CodeBuild and deploys them to an environment, handling the deployment details.
+
+4. **Pipeline Orchestration**: AWS CodePipeline automates the workflow from code update to deployment. It connects to GitHub, triggers CodeBuild projects, and deploys using Elastic Beanstalk.
+
+Here's a high-level overview of the steps involved:
+
+- **Connect GitHub to CodePipeline**: Set up a webhook in GitHub to trigger your pipeline on a commit.
+- **Set up CodeBuild**: Define build specifications and connect it to your pipeline.
+- **Configure Elastic Beanstalk**: Prepare your environment for deployment and set it as the target for CodeBuild artifacts.
+- **Create the Pipeline**: Use AWS CodePipeline to orchestrate the process, defining each stage and action based on the above services.
+
+For detailed instructions, AWS provides comprehensive guides and documentation¹. Remember, you'll need appropriate IAM roles and permissions set up for these services to interact with each other securely.
 
 ## Contents
 
-- [Subnets](1.1-subnets/)
-- [Route Table](1.2-routetable/)
-- [Internet Gateway](1.3-internetgateway/)
-- [NAT Gateway](1.4-natgateway/)
-
-In the following sections, we will delve into the fundamental concepts of VPC.
+- [AWS Code Build](1.1-awscodebuild/)
+- [AWS Code Pipeline](1.2-awscodepipeline/)
+- [AWS Elastic Beanstalk](1.3-elasticbeanstalk/)

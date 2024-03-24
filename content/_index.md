@@ -1,23 +1,23 @@
 ---
-title : "Start with Amazon VPC and AWS VPN Site-to-Site"
+title : "Create Continuous Delivery Pipeline with NodeJS"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Start with Amazon VPC and AWS VPN Site-to-Site
+# Create Continuous Delivery Pipeline with NodeJS
 
 #### Overview
 
-In this lab, you will explore the fundamentals of Amazon VPC (Virtual Private Cloud) and AWS VPN (Virtual Private Network) Site-to-Site connections. Gain an understanding of essential concepts and features within Amazon VPC, and practice creating a basic VPC. Additionally, learn how to configure a Site-to-Site VPN to establish a connection between an on-premise environment and an AWS VPC environment.
+In this lab, you will create a continuous delivery pipeline for a simple web application. You will first use a version control system to store your source code. Then, you will learn how to create a continuous delivery pipeline that will automatically deploy your web application whenever your source code is updated.
 
-![VPC](../images/1-Introduce/serviceicon.png?featherlight=false&width=10pc)
+![CICD](../images/1-Introduce/workshop-diagram.drawio.png?featherlight=false&width=100pc)
 
 #### Content
 
-1. [Introduction to VPC](1-introduce/)
-2. [Firewall within VPC](2-firewallinvpc/)
-3. [Preparation Steps](3-prerequiste/)
-4. [Creating an EC2 Server](4-createec2server/)
-5. [Configuration of Site-to-Site VPN](5-vpnsitetosite/)
+1. [Introduction](1-introduce/)
+2. [Setup Git Repo](2-setupgitrepo/)
+3. [Deploy Web App](3-deloywebapp/)
+4. [Creating Build Project](4-createbuildproject/)
+5. [Create Delivery Pipeline](5-createdeliverypipeline/)
 6. [Resource Cleanup](6-cleanup/)

@@ -34,11 +34,6 @@ identifier = "AWS Study Group FB"
 url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
-[Languages.vi]
-title = "Bắt đầu với Amazon VPC và AWS VPN Site to Site"
-weight = 2
-languageName = "Tiếng Việt"
-
 [[Languages.vi.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
 identifier = "AWS Study Group"
