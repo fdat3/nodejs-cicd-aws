@@ -13,8 +13,8 @@ pre : " <b> 5.4 </b> "
 3. Under Region, confirm that the **US West (Oregon) Region** is selected.
 4. Select the field under **Application name** and confirm you can see the app **DevOpsGettingStarted**.
 5. Select **DevOpsGettingStarted-env** from the **Environment name** textbox.
-![Config The Deploy Stage](/images/5-CreateDeliveryPipeline/5.4-ConfigTheDeployStage/0001-config-deploy-stage.png)
+![Config The Deploy Stage](https://fdat3.github.io/nodejs-cicd-aws/images/5-CreateDeliveryPipeline/5.4-ConfigTheDeployStage/0001-config-deploy-stage.png)
 6. Click **Next** button to **Review** your config.
 7. Click **Create Pipeline** if everything is ok !
 8. Congrats, now you can see the progress !
-![Config The Deploy Stage](/images/5-CreateDeliveryPipeline/5.4-ConfigTheDeployStage/0002-config-deploy-stage.png)
+![Config The Deploy Stage](https://fdat3.github.io/nodejs-cicd-aws/images/5-CreateDeliveryPipeline/5.4-ConfigTheDeployStage/0002-config-deploy-stage.png)

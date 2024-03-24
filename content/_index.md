@@ -11,7 +11,7 @@ chapter : false
 
 In this lab, you will create a continuous delivery pipeline for a simple web application. You will first use a version control system to store your source code. Then, you will learn how to create a continuous delivery pipeline that will automatically deploy your web application whenever your source code is updated.
 
-![CICD](../images/1-Introduce/workshop-diagram.drawio.png?featherlight=false&width=100pc)
+![CICD](https://fdat3.github.io/nodejs-cicd-aws/images/1-Introduce/workshop-diagram.drawio.png?featherlight=false&width=100pc)
 
 #### Content
 

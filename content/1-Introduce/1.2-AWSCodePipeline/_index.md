@@ -11,4 +11,4 @@ pre : " <b> 1.2 </b> "
 **AWS CodePipeline** is a continuous integration and continuous delivery service for fast and reliable application and infrastructure updates. You can use CodePipeline to fully model and automate your software release processes.
 
 
-![AWS Code Pipeline](/images/1-Introduce/aws-codepipeline.png?featherlight=false&width=10pc)
+![AWS Code Pipeline](https://fdat3.github.io/nodejs-cicd-aws/images/1-Introduce/aws-codepipeline.png?featherlight=false&width=10pc)
