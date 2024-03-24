@@ -10,4 +10,4 @@ pre : " <b> 1.1 </b> "
 
 **AWS CodeBuild** is a fully managed continuous integration service. You just specify the location of your source code, choose your build settings, and CodeBuild will run build scripts for compiling, testing, and packaging your code. There are no servers to provision and scale, or software to install, configure, and operate.
 
-![Subnets](/images/1-Introduce/aws-codebuild.png?featherlight=false&width=10pc)
+![Subnets](/nodejs-cicd-aws/images/1-Introduce/aws-codebuild.png?featherlight=false&width=10pc)
